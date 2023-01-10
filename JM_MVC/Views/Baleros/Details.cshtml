@@ -1,0 +1,23 @@
+﻿@model JM_MVC.Models.Balero
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Balero</h4>
+    <hr />
+    <div class="card" style="width: 25rem; height: 18rem;">
+        <img src="https://m.media-amazon.com/images/I/61uYTNaAruL._SX522_.jpg" style="width: 10rem; height: 10rem;" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Html.DisplayFor(model => model.Marca) @Html.DisplayFor(model => model.Codigo)</h5>
+            <p class="card-text">Balero de Serie 6 mil para uso cotidiano, desde automotriz hasta para muebles.</p>
+            <div>
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.IdBaleros">Editar</a>
+                <a class="btn btn-success" asp-action="Index">Regresar al listado</a>
+            </div>
+        </div>
+    </div>
+</div>

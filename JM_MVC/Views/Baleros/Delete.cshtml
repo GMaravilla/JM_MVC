@@ -1,0 +1,28 @@
+﻿@model JM_MVC.Models.Balero
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar</h1>
+
+<h3>Esta Seguro que desea Eliminar este elemento?</h3>
+<div>
+    <h4>Balero</h4>
+    <hr />
+
+    <div class="card" style="width: 25rem; height: 18rem;">
+        <img src="https://m.media-amazon.com/images/I/61uYTNaAruL._SX522_.jpg" style="width: 10rem; height: 10rem;" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Html.DisplayFor(model => model.Marca) @Html.DisplayFor(model => model.Codigo)</h5>
+            <p class="card-text">Balero de Serie 6 mil para uso cotidiano, desde automotriz hasta para muebles.</p>
+            <div>
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="IdBaleros" />
+                    <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+                    <a class="btn btn-success" asp-action="Index">Regresar al Listado</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
